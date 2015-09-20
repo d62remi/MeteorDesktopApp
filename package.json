@@ -1,0 +1,29 @@
+{
+  "name": "MeteorDesktopApp",
+  "version": "0.1.0",
+  "description": "Build stand-alone Meteor desktop app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d62remi/MeteorDesktopApp.git"
+  },
+  "keywords": [
+    "meteor",
+    "desktop",
+    "app"
+  ],
+  "author": "d62remi@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d62remi/MeteorDesktopApp/issues"
+  },
+  "homepage": "https://github.com/d62remi/MeteorDesktopApp",
+  "dependencies": {
+    "readline-sync": "^1.2.21",
+    "nw-builder": "^2.0.2",
+    "optimist": "^0.6.1"
+  }
+}
