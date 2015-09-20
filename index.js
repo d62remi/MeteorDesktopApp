@@ -1,21 +1,27 @@
-var argv = require('optimist').argv;
-var NwBuilder = require('nw-builder');
-detectCurrentPlatform = require('nw-builder/lib/detectCurrentPlatform.js');
-require('./lib/nwFolder');
+optimist = require('optimist');
+argv = optimist
+            .usage('defined help section')
+            .argv;
 
+if (argv.h || argv.help) {
+    optimist.showHelp();
+    process.exit(0);
+}
+
+detectCurrentPlatform = require('nw-builder/lib/detectCurrentPlatform.js');
 myPlatform = detectCurrentPlatform();
+
+require('./lib/nwFolder');
 
 nwjsVersion = '0.12.3';
 
-var nw = new NwBuilder({
-    files: 'nw-app/*.*', // use the glob format
-    version: nwjsVersion,
-    platforms: [myPlatform]
-});
-
-
-nw.run().then(function () {
-   console.log('all done!');
-}).catch(function (error) {
-    console.error(error);
-});
+switch (argv._[0] || '') {
+  case 'run':
+    require('./lib/run');
+    break;
+  case 'build':
+    require('./lib/build');
+    break;
+  default:
+    require('./lib/run');
+}
