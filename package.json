@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "mda": "./bin/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/d62remi/MeteorDesktopApp.git"
@@ -22,8 +25,9 @@
   },
   "homepage": "https://github.com/d62remi/MeteorDesktopApp",
   "dependencies": {
-    "readline-sync": "^1.2.21",
+    "commander": "^2.8.1",
     "nw-builder": "^2.0.2",
-    "optimist": "^0.6.1"
+    "optimist": "^0.6.1",
+    "readline-sync": "^1.2.21"
   }
 }
