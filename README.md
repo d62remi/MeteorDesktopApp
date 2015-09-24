@@ -3,8 +3,8 @@ Build stand-alone Meteor desktop app
 
 # TODO
 - [ ] Lister les différentes commandes (Command line tools)
-  - [ ] $ mda init 
-    - [ ] Vérification que le dossier ``.meteor`` existe. S'il n'existe pas alors afficher le message ``This folder contains no meteor project``
+  - [ ] $ mda init
+    - [X] Vérification que le dossier ``.meteor`` existe. S'il n'existe pas alors afficher le message ``This folder contains no meteor project``
     - [ ] Création du fichier ``mda-config.json`` avec toutes les options obligatoires renseignées (Si le fichier existe déjà le supprimer)
   - [ ] $ mda run
     - [ ] Vérifier que le fichier ``mda-config.json`` existe. S'il n'existe pas alors afficher le message ``Execute mda init``
