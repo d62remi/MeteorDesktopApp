@@ -16,7 +16,7 @@ program
   .command('run')
   .description('Run the development environment')
   .action(function(){
-    console.log('run')
+    require('../lib/run.js');
   });
 
 program
