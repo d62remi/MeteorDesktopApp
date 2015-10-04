@@ -5,7 +5,25 @@
   <body>
     <script charset="utf-8">
       if (process.env.ENVIRON == 'DEV'){
-        alert('toto');
+        // App environement
+        var gui = require('nw.gui');
+
+        // Get the current window
+        var splashScreen = gui.Window.get();
+
+
+        // Open meteor app
+        var mdaWindow = gui.Window.open('http://localhost:3000',gui.App.manifest.mdaWindow);
+
+        mdaWindow.on('loaded', function(){
+          mdaWindow.show();
+          splashScreen.hide();
+        });
+
+        mdaWindow.on('closed', function(){
+          // Quit current app
+          gui.App.quit();
+        });
       }else{
 
       }

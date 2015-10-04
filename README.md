@@ -12,10 +12,10 @@ Build stand-alone Meteor desktop app
     - [X] Vérifier que le dossier ``.mda`` existe. S'il n'existe pas alors le créer
     - [X] Vérifier que le fichier ``.mda/package.json`` n'exite pas. S'il exite alors le supprimer
     - [X] Création du fichier ``.mda/package.json`` grâce au fichier ``mda-config.json``
-    - [ ] Vérifier que le fichier ``.mda/index.html`` existe. S'il n'existe pas alors le créer
+    - [X] Vérifier que le fichier ``.mda/index.html`` existe. S'il n'existe pas alors le créer
     - [X] Définir ``process.env.ENVIRON='DEV'``
-    - [ ] Lancer la commande ``meteor`` dans le dossier courant
+    - [X] Lancer la commande ``meteor`` dans le dossier courant
     - [X] Lancer NWBuilder().run() ``https://github.com/nwjs/nw-builder``
-    - [ ] Le fichier ``.mda/index.html`` correspond au splash screen. Il ouvre une nouvelle fenêtre sur ``http://localhost:3000`` dans l'environement ``process.env.ENVIRON='DEV'``
+    - [X] Le fichier ``.mda/index.html`` correspond au splash screen. Il ouvre une nouvelle fenêtre sur ``http://localhost:3000`` dans l'environement ``process.env.ENVIRON='DEV'``
   - [ ] $ mda build
   - [ ] $ mda reset
