@@ -14,8 +14,10 @@ program
 
 program
   .command('run')
+  .option("-d, --dev_mode", "Show Dev Tools")
   .description('Run the development environment')
-  .action(function(){
+  .action(function(options){
+    process.dev_mode = options.dev_mode ? "dev" : "";
     require('../lib/run.js');
   });
 

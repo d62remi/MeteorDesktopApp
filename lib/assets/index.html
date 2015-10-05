@@ -27,6 +27,9 @@
         mdaWindow.on('loaded', function(){
           splashScreen.hide();
           mdaWindow.show();
+          if(process.env.DEV_MODE){
+            mdaWindow.showDevTools();
+          }
         });
         mdaWindow.on('closed', function(){
           // Quit current app

@@ -1,0 +1,39 @@
+{
+  "name": "mda-app",
+  "version": "0.1.0",
+  "main": "index.html",
+  "description": "mda-app description",
+  "keywords": [
+    "mda-app",
+    "meteor",
+    "desktop",
+    "app"
+  ],
+  "splashScreen": {
+    "title": "splash screen",
+    "toolbar": false,
+    "frame": false,
+    "width": 620,
+    "height": 350,
+    "position": "center",
+    "resizable": false,
+    "always-on-top": true,
+    "image": "imgSplashScreen.jpg"
+  },
+  "mainWindow": {
+    "frame": true,
+    "toolbar": false,
+    "width": 800,
+    "height": 500,
+    "position": "center"
+  },
+  "platforms": [
+    "osx32",
+    "osx64",
+    "win32",
+    "win64"
+  ],
+  "nwjs_version": "0.12.3",
+  "node_version": "0.10.36",
+  "mongo_version": "2.6.9"
+}
