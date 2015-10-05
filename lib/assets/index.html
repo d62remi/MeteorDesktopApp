@@ -15,7 +15,7 @@
         // App environement
         var gui = require('nw.gui');
         // imgSplashScreen
-        document.getElementById("imgSplashScreen").src = gui.App.manifest.imgSplashScreen || "imgSplashScreen.jpg";
+        document.getElementById("imgSplashScreen").src = gui.App.manifest.splashScreen.image || "imgSplashScreen.jpg";
         // Get the current window
         var splashScreen = gui.Window.get();
         splashScreen.on("loaded",function(){
