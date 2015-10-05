@@ -29,6 +29,7 @@
     "commander": "^2.8.1",
     "nw-builder": "^2.0.2",
     "readline-sync": "^1.2.21",
+    "spawn-cmd": "0.0.2",
     "underscore": "^1.8.3"
   }
 }

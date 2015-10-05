@@ -1,25 +1,33 @@
 <html>
   <head>
     <title>splash screen</title>
+    <style media="screen">
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
   </head>
   <body>
+    <img id="imgSplashScreen" src="" />
     <script charset="utf-8">
       if (process.env.ENVIRON == 'DEV'){
         // App environement
         var gui = require('nw.gui');
-
+        // imgSplashScreen
+        document.getElementById("imgSplashScreen").src = gui.App.manifest.imgSplashScreen || "imgSplashScreen.jpg";
         // Get the current window
         var splashScreen = gui.Window.get();
-
-
-        // Open meteor app
-        var mdaWindow = gui.Window.open('http://localhost:3000',gui.App.manifest.mdaWindow);
-
-        mdaWindow.on('loaded', function(){
-          mdaWindow.show();
-          splashScreen.hide();
+        splashScreen.on("loaded",function(){
+          splashScreen.show();
         });
-
+        // Open meteor app
+        var mdaWindow = gui.Window.open('http://localhost:3000'
+                                          ,gui.App.manifest.mainWindow);
+        mdaWindow.on('loaded', function(){
+          splashScreen.hide();
+          mdaWindow.show();
+        });
         mdaWindow.on('closed', function(){
           // Quit current app
           gui.App.quit();
