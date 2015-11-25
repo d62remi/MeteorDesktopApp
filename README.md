@@ -19,3 +19,5 @@ Build stand-alone Meteor desktop app
     - [X] Le fichier ``.mda/index.html`` correspond au splash screen. Il ouvre une nouvelle fenêtre sur ``http://localhost:3000`` dans l'environement ``process.env.ENVIRON='DEV'``
   - [ ] $ mda build
   - [ ] $ mda reset
+
+#test
